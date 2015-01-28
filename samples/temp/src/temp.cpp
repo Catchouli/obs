@@ -10,12 +10,8 @@
 #include <obs/Observer.h>
 #include <obs/Connection.h>
 
-void staticFunctionTest(int i)
-{
-    printf("static function test %d\n", i);
-}
-
 struct Test
+    : public obs::Observer
 {
     void test(int i)
     {
@@ -30,10 +26,6 @@ int main(int argc, char** argv)
 
     obs::Signal<int> sig;
 
-    auto lambda = [](int i){ printf("lambda function test %d\n", i); };
-
-    sig.connect(staticFunctionTest);
-    sig.connect(lambda);
     sig.connect(&test, &Test::test);
 
     sig.emit(5);

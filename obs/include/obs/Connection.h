@@ -12,29 +12,6 @@ namespace obs
 
     };
 
-    template <typename... Args>
-    class Connection_FunctionPointer
-        : public Connection<Args...>
-    {
-    public:
-
-        typedef void FunctionType(Args...);
-        typedef FunctionType* PointerType;
-
-        Connection_FunctionPointer(PointerType functionPtr)
-            : mFunctionPtr(functionPtr)
-        {
-        }
-
-        void emit(Args... args) override
-        {
-            mFunctionPtr(args...);
-        }
-
-        PointerType mFunctionPtr;
-
-    };
-
     template <typename T, typename... Args>
     class Connection_MemberFunctionPointer
         : public Connection<Args...>

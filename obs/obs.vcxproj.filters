@@ -57,9 +57,4 @@
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\Blank.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
