@@ -1,0 +1,4 @@
+*.opensdf
+*.sdf
+/projectfiles/Windows/bin
+/projectfiles/Windows/obj
