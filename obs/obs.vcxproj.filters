@@ -36,9 +36,6 @@
     <ClInclude Include="include\managers\Manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\obs\DLL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\obs\Observer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -48,12 +45,24 @@
     <ClInclude Include="include\obs\Signal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\obs\obs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="include\util\EntityMap.inl">
       <Filter>Header Files</Filter>
     </None>
     <None Include="include\util\TypeEnumerator.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\obs\Connection.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\obs\Observer.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\obs\Signal.inl">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>

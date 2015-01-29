@@ -79,7 +79,7 @@
     <ClInclude Include="include\managers\EntityManager.h" />
     <ClInclude Include="include\managers\Manager.h" />
     <ClInclude Include="include\obs\Connection.h" />
-    <ClInclude Include="include\obs\DLL.h" />
+    <ClInclude Include="include\obs\obs.h" />
     <ClInclude Include="include\obs\Observer.h" />
     <ClInclude Include="include\obs\Signal.h" />
     <ClInclude Include="include\util\dynamic_bitset.h" />
@@ -88,6 +88,9 @@
     <ClInclude Include="include\util\TypeEnumerator.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="include\obs\Connection.inl" />
+    <None Include="include\obs\Observer.inl" />
+    <None Include="include\obs\Signal.inl" />
     <None Include="include\util\EntityMap.inl" />
     <None Include="include\util\TypeEnumerator.inl" />
   </ItemGroup>
