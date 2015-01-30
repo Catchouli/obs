@@ -22,15 +22,24 @@ struct Test
 
 int main(int argc, char** argv)
 {
-    Test test;
+    Test test, test2;
 
     obs::Signal<int> sig;
 
     sig.connect(&test, &Test::test);
-    sig.connect(&test, &Test::test);
+    sig.connect(&test2, &Test::test);
     sig.connect(&test, &Test::test2);
 
+    // 3 calls
     sig.emit(5);
+    
+    // 2 calls
+    sig.disconnect(&test2);
+    sig.emit(10);
+    
+    // 0 calls
+    sig.disconnectAll();
+    sig.emit(15);
 
     system("pause");
     return 0;
