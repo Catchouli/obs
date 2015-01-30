@@ -37,4 +37,6 @@ int main(int argc, char** argv)
 }
 ```
 
+The template arguments to Signal are the arguments of the slot function. Only observer functions with the prototype void(args...) can be registered, providing type safety.
+
 Connections are broken automatically when either observer or signal goes out of scope or is otherwise destructed, and can also be disconnected manually by calling Signal::disconnect or Signal::disconnectAll.
