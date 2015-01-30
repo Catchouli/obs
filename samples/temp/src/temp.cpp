@@ -1,12 +1,4 @@
-#include <iostream>
-#include <typeinfo>
-#include <sstream>
-#include <functional>
-#include <typeinfo>
-#include <memory>
-#include <vector>
-#include <unordered_set>
-
+#include <cstdio>
 #include <obs/obs.h>
 
 struct Test

@@ -1,7 +1,5 @@
 #include "obs/Connection.h"
 
-#include <cstdio>
-
 namespace obs
 {
     template <typename T, typename... Args>
