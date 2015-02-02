@@ -28,6 +28,10 @@ int main(int argc, char** argv)
 
     sig.emit(5);
 
+    obs::SignalBase* typeErased = &sig;
+    
+    typeErased->emit(50);
+
     system("pause");
     return 0;
 }
