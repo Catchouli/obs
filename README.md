@@ -22,19 +22,30 @@ struct Test
 
 int main(int argc, char** argv)
 {
-    Test test;
+    Test test, test2;
 
     obs::Signal<int> sig;
 
     sig.connect(&test, &Test::test);
-    sig.connect(&test, &Test::test);
+    sig.connect(&test2, &Test::test);
     sig.connect(&test, &Test::test2);
 
+    // 3 calls
     sig.emit(5);
+    
+    // 2 calls
+    sig.disconnect(&test2);
+    sig.emit(10);
+    
+    // 0 calls
+    sig.disconnectAll();
+    sig.emit(15);
 
     system("pause");
     return 0;
 }
 ```
+
+The template arguments to Signal are the arguments of the slot function. Only observer functions with the prototype void(args...) can be registered, providing type safety.
 
 Connections are broken automatically when either observer or signal goes out of scope or is otherwise destructed, and can also be disconnected manually by calling Signal::disconnect or Signal::disconnectAll.
