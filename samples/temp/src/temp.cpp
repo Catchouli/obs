@@ -18,11 +18,12 @@ struct Test
 int main(int argc, char** argv)
 {
     Test test;
+    Test test2;
 
     obs::Signal<int> sig;
 
     sig.connect(&test, &Test::test);
-    sig.connect(&test, &Test::test);
+    sig.connect(&test2, &Test::test);
     sig.connect(&test, &Test::test2);
 
     sig.emit(5);

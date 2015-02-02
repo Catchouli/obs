@@ -58,10 +58,10 @@ namespace obs
     void Signal<Args...>::disconnectAll()
     {
         // Copy map so we can modify the old one
-        auto map = mObservers;
+        auto observers = mObservers;
 
         // Remove connections
-        for (auto& observer : map)
+        for (auto& observer : observers)
         {
             for (auto& connection : observer.second)
             {
