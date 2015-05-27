@@ -1,6 +1,10 @@
 <h2>obs</h2>
 
-Simple observer pattern library for C++. This project provides the features of the well known sigslot library, but with C++11 variadic templates. Example usage:
+Simple observer pattern library for C++. This project provides the features of the well known sigslot library, but with C++11 variadic templates.
+
+This library is header-only and free of dependencies. Just grab the include files from obs/include, or from the release page.
+
+Example usage:
 
 ```c++
 #include <cstdio>
